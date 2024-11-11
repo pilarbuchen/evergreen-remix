@@ -5,6 +5,7 @@ import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
 import ViteSvg from '../../../src/assets/svg/vite.svg';
+import { Button } from 'evergreen-ui';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
@@ -13,6 +14,9 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
+            <div>
+                <Button appearance="primary">Evergreen Button</Button>
+            </div>
             <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
             <span>
                 Double click to edit App component
